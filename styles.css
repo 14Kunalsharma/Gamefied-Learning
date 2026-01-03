@@ -20,7 +20,7 @@ body {
     font-size: 2rem;
     font-weight: bold;
     color: #43a047;
-    margin-bottom: 2rem;
+    margin-bottom: 0.8rem;
   }
   .sidebar-nav {
     display: flex;
