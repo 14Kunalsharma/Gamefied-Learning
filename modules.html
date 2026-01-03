@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Modules - EcoLearn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .modules-container{padding:24px;}
+    .module-card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06); margin-bottom:14px;}
+    .back{margin-bottom:12px;display:inline-block;}
+  </style>
+</head>
+<body>
+  <div class="modules-container">
+    <a class="back" href="index.html">← Back to Dashboard</a>
+    <h2>Lesson Modules</h2>
+    <div class="module-card">
+      <h4>Module 1: Introduction to Environment</h4>
+      <p>Topics: Ecosystem, Biodiversity, Pollution basics.</p>
+      <button onclick="startModule(1)">Start Module</button>
+    </div>
+    <div class="module-card">
+      <h4>Module 2: Waste Management</h4>
+      <p>Topics: Reduce, Reuse, Recycle, Composting.</p>
+      <button onclick="startModule(2)">Start Module</button>
+    </div>
+    <div class="module-card">
+      <h4>Module 3: Renewable Energy</h4>
+      <p>Topics: Solar, Wind, Hydro basics.</p>
+      <button onclick="startModule(3)">Start Module</button>
+    </div>
+  </div>
+
+  <script>
+    function startModule(id){
+      alert('Module '+id+' started (this is a placeholder).');
+      // In a full app you'd route to module content pages.
+    }
+    // simple auth check: redirect to signin if not logged in
+    const current = localStorage.getItem('eco_current_user');
+    if(!current){ window.location='signin.html'; }
+  </script>
+</body>
+</html>

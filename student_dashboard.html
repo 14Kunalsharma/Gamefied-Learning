@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Student Dashboard - EcoLearn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .sd-container{padding:24px;}
+    .card{background:#fff;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06); margin-bottom:14px;}
+    .logout{float:right;}
+  </style>
+</head>
+<body>
+  <div class="sd-container">
+    <a href="index.html">← Home</a>
+    <button class="logout" onclick="logout()">Logout</button>
+    <h2>Student Updates</h2>
+    <div id="updatesArea"></div>
+    <h3>Your Profile</h3>
+    <div id="profileCard" class="card"></div>
+  </div>
+
+  <script>
+    function getUsers(){ return JSON.parse(localStorage.getItem('eco_users')||'[]'); }
+    const user = JSON.parse(localStorage.getItem('eco_current_user')||'null');
+    if(!user){ window.location='signin.html'; }
+    document.getElementById('profileCard').innerHTML = '<strong>'+user.name+'</strong><br/>'+user.email+'<br/>Role: '+(user.role||'Student')+'<br/>Points: '+(user.points||0);
+
+    const updatesArea = document.getElementById('updatesArea');
+    const users = getUsers();
+    // For demonstration, show all students' latest updates
+    users.filter(u=> (u.role||'Student').toLowerCase()==='student').forEach(u=>{
+      const div = document.createElement('div');
+      div.className='card';
+      div.innerHTML = '<strong>'+u.name+'</strong><br/>' + (u.updates && u.updates.length? u.updates.slice(-3).reverse().map(x=>'<div>- '+x+'</div>').join('') : '<em>No updates yet</em>');
+      updatesArea.appendChild(div);
+    });
+
+    function logout(){
+      localStorage.removeItem('eco_current_user');
+      window.location='signin.html';
+    }
+  </script>
+</body>
+</html>

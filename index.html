@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EcoQuest Dashboard</title>
+  <meta name="viewport" content="width=1200">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <span class="logo">🌱 EcoQuest</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a class="active" href="student_dashboard.html">Student Dashboard</a>
+        <a href="modules.html">Lessons</a>
+        <a href="#">Challenges</a>
+        <a href="#">Leaderboard</a>
+        <a href="#">Teacher Dashboard</a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="badge">Badges <strong>12</strong></div>
+        <div class="streak">Streak <strong>9 days</strong></div>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-title">Eco-points</div>
+          <div class="stat-value">3,450</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-title">Level</div>
+          <div class="stat-value">7</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-title">Badges earned</div>
+          <div class="stat-value">12</div>
+        </div>
+      </div>
+
+      <div class="dashboard-highlight">
+        <div class="welcome-box">
+          <h2>Welcome, Eco-Hero!</h2>
+          <div class="circle-progress">
+            <span>75%</span>
+            <br>
+            <small>Modules Complete</small>
+          </div>
+        </div>
+        <div class="mission-box">
+          <div class="mission-title">Current Mission</div>
+          <div class="mission-desc">WATER WISE CHALLENGE<br><span>Track your water usage for a week</span></div>
+          <button class="primary-btn">Start Mission</button>
+        </div>
+      </div>
+
+      <section class="dashboard-sections">
+        <div class="section">
+          <h3>Ongoing Lessons</h3>
+          <div class="lessons-list">
+            <div class="lesson-card">
+              <div class="lesson-title">Water Conservation 101</div>
+              <div class="lesson-desc">Learn practical ways to reduce water use at school and home.</div>
+              <div class="lesson-progress"><div class="progress-bar" style="width: 60%;"></div></div>
+              <div class="lesson-meta">60% complete | Est. 15 min</div>
+              <div class="lesson-links">5 quizzes • 2 videos</div>
+              <button class="small-btn">Continue</button>
+            </div>
+            <div class="lesson-card">
+              <div class="lesson-title">Waste Sorting Basics</div>
+              <div class="lesson-desc">Master recycling categories and reduce contamination.</div>
+              <div class="lesson-progress"><div class="progress-bar" style="width: 35%;"></div></div>
+              <div class="lesson-meta">35% complete | Est. 10 min</div>
+              <div class="lesson-links">3 quizzes • 1 video</div>
+              <button class="small-btn">Continue</button>
+            </div>
+            <div class="lesson-card">
+              <div class="lesson-title">Renewable Energy</div>
+              <div class="lesson-desc">Explore solar, wind and more with interactive examples.</div>
+              <div class="lesson-progress"><div class="progress-bar" style="width: 0%;"></div></div>
+              <div class="lesson-meta">Not started | Est. 20 min</div>
+              <div class="lesson-links">6 quizzes • 3 videos</div>
+              <button class="small-btn">Start Lesson</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Active Challenges</h3>
+          <div class="challenges-list">
+            <div class="challenge-card">
+              <div class="challenge-title">Bike to School Week</div>
+              <div class="challenge-desc">Cycle to school for 3 days and submit a photo proof.</div>
+              <div class="challenge-meta">Reward: 150 pts | Due: Fri</div>
+              <button class="small-btn">Submit Proof</button>
+            </div>
+            <div class="challenge-card">
+              <div class="challenge-title">Litter Cleanup</div>
+              <div class="challenge-desc">Collect litter from a public space and sort recyclables.</div>
+              <div class="challenge-meta">Reward: 200 pts | Due: Sun</div>
+              <button class="small-btn">Submit Proof</button>
+            </div>
+            <div class="challenge-card">
+              <div class="challenge-title">Meatless Monday</div>
+              <div class="challenge-desc">Go meatless for a day and share your plate.</div>
+              <div class="challenge-meta">Reward: 80 pts | Due: Today</div>
+              <button class="small-btn">Submit Proof</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="section badges-section">
+          <h3>Your Badges</h3>
+          <div class="badges-list">
+            <span class="badge-item">♻️ Recyclian</span>
+            <span class="badge-item">💡 Energy Saver</span>
+            <span class="badge-item">🌱 Tree Planter</span>
+            <span class="badge-item locked">🔒</span>
+            <span class="badge-item locked">🔒</span>
+          </div>
+        </div>
+
+        <div class="section module-progress-section">
+          <h3>Module Progress</h3>
+          <div>Climate Change 101: <span class="progress-label">100%</span>
+            <div class="module-bar"><div class="module-progress" style="width:100%"></div></div>
+          </div>
+          <div>Biodiversity Basics: <span class="progress-label">30%</span>
+            <div class="module-bar"><div class="module-progress" style="width:30%"></div></div>
+          </div>
+        </div>
+
+        <div class="section leaderboard-section">
+          <h3>Leaderboard</h3>
+          <ol>
+            <li>Anya V. - 1250 pts</li>
+            <li>Arjun V. - 1180 pts</li>
+            <li>Sara L. - 920 pts</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
